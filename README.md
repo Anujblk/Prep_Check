@@ -76,19 +76,6 @@ git remote add origin https://github.com/YOUR_USERNAME/interview-prep-tracker.gi
 git push -u origin main
 ```
 
-## Demo video (1–2 minutes)
-
-Suggested 90-second walkthrough:
-
-1. **0:00–0:15 — Overview:** introduce Prepwise and point out the four summary cards and completion ring.
-2. **0:15–0:35 — Add a question:** add a DSA question, set its difficulty and status, and save it.
-3. **0:35–0:55 — Update progress:** mark a question completed and show the dashboard metrics and weekly progress react to the change.
-4. **0:55–1:10 — Search and filters:** search by a keyword, filter by category/status/difficulty, and clear filters.
-5. **1:10–1:25 — Editing and persistence:** edit notes, change machine-coding status, refresh the page, and show that the data remains.
-6. **1:25–1:30 — Wrap up:** mention the stack and share the repository/live URL.
-
-Record your screen with any recorder available to you. Keep the cursor deliberate and use a browser window at desktop width for the main walkthrough, then optionally resize to mobile to show responsiveness.
-
 ## Assumptions and implementation notes
 
 - The app starts with sample questions so the dashboard is populated on first launch. You can edit or delete these examples and add your own.
@@ -99,7 +86,3 @@ Record your screen with any recorder available to you. Keep the cursor deliberat
 - Weekly completion counts items newly marked completed during the current Monday–Sunday week. The weekly goal is adjustable.
 - This is a client-side practice app. `localStorage` is specific to the browser/device and is not shared between users or devices. Clearing site data removes the saved tracker.
 - Authentication, multi-user sync, and a backend API are intentionally out of scope for this assignment.
-
-## Suggested interview explanation
-
-“I built a responsive interview-preparation dashboard with React. The question list is the single source of truth for summary counts and completion progress. Search and filter state is kept separately so the user can narrow the list without deleting data. I persist the tracker, weekly goal, and machine-coding status with `localStorage`, which makes the demo work without a backend. The main trade-off is that browser storage is local to one device; a production version could replace it with an authenticated API and database.”
